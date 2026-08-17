@@ -39,42 +39,6 @@ application/
     └── routes.php         # default_controller = buku
 ```
 
-## Cara Instalasi (Local - XAMPP/Laragon)
-
-1. **Clone / copy** folder project ini ke `htdocs` (XAMPP) atau `www` (Laragon).
-   Contoh path: `C:/xampp/htdocs/perpustakaan-digital`
-
-2. **Buat database** lewat phpMyAdmin, lalu import file SQL:
-   ```
-   database/perpustakaan_digital.sql
-   ```
-   File ini akan otomatis membuat database `perpustakaan_digital`, tabel
-   `users` & `buku`, beserta data contoh.
-
-3. **Cek konfigurasi database** di `application/config/database.php`:
-   ```php
-   'hostname' => 'localhost',
-   'username' => 'root',
-   'password' => '',
-   'database' => 'perpustakaan_digital',
-   ```
-   Sesuaikan `username`/`password` dengan MySQL di komputer masing-masing.
-
-4. **Aktifkan mod_rewrite** (Apache) supaya URL tanpa `index.php` bisa jalan
-   (file `.htaccess` sudah disediakan di root project).
-
-5. **Akses di browser**:
-   ```
-   http://localhost/perpustakaan-digital/
-   ```
-   Akan otomatis diarahkan ke halaman login.
-
-6. **Login default**:
-   ```
-   Username : admin
-   Password : admin123
-   ```
-
 ## Konfigurasi Penting
 
 | Konfigurasi   | Lokasi                                | Nilai                                   |
